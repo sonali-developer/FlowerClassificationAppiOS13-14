@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f8X-w3-Wsu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlowerClassifierAppiOS13_14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jri-aG-Vd1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jri-aG-Vd1" secondAttribute="height" multiplier="1:1" id="lMF-Yd-B0Z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="boD-4a-Bt5">
+                                <rect key="frame" x="15" y="517" width="414" height="364"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="boD-4a-Bt5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="15" id="2uo-zm-4bR"/>
+                            <constraint firstItem="Jri-aG-Vd1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E3C-gQ-IAY"/>
+                            <constraint firstItem="Jri-aG-Vd1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPW-FK-XDQ"/>
+                            <constraint firstAttribute="bottom" secondItem="boD-4a-Bt5" secondAttribute="bottom" constant="15" id="JSH-c0-nRR"/>
+                            <constraint firstItem="Jri-aG-Vd1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LVI-p0-YK5"/>
+                            <constraint firstItem="boD-4a-Bt5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="aQG-7s-uCA"/>
+                            <constraint firstItem="boD-4a-Bt5" firstAttribute="top" secondItem="Jri-aG-Vd1" secondAttribute="bottom" constant="15" id="fU6-9h-ypp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9fY-v4-u0n">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="rNP-RN-tCv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="iXm-ms-4YN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="flowerDescriptionLabel" destination="boD-4a-Bt5" id="L7Z-jv-pQL"/>
+                        <outlet property="flowerImageView" destination="Jri-aG-Vd1" id="caN-bG-VPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="-334.15178571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W4V-dL-Qh9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8X-w3-Wsu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sgm-FS-B2U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QCr-6h-TNh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bse-uP-CtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.08695652173915" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+</document>
